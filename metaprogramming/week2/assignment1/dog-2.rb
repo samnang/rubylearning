@@ -13,7 +13,7 @@ class Dog
 
   def can(*args, &block)
     args.each do |e|
-      block = block_given? ? block : lambda {"#{name} #{Messages[e]}"}
+      block = lambda {"#{name} #{Messages[e]}"} unless block_given?
       singleton_class.send(:define_method, e, &block)
     end
   end
