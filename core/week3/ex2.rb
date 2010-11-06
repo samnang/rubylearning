@@ -33,9 +33,10 @@
 def replace_text_in_file(file_name, text, new_text)
   File.open(file_name, 'r+') do |f|
     new_content = f.read.gsub(text, new_text)
+    f.rewind
     f.puts new_content
   end
 end
 
-replace_text_in_file("/home/samnang/test.txt", "word", "inserted word")
+replace_text_in_file(ARGV[0], "word", "inserted word")
 

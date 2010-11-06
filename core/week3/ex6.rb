@@ -16,15 +16,8 @@ loop do
   input = gets.chomp
 
   break if input == "BYE"
-  respond = if input == input.upcase
-              years = [*1930..1950]
-              random_year = years[rand(years.size)]
-
-              "NO, NOT SINCE #{random_year}!"
-            else
-              "HUH?! SPEAK UP, SONNY!"
-            end
-
+  respond = (input == input.upcase) ? "NO, NOT SINCE #{Random.new.rand(1930..1950)}!" :
+                                      "HUH?! SPEAK UP, SONNY!"
   puts "Grandma responds: #{respond}"
 end
 

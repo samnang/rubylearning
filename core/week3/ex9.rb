@@ -4,5 +4,5 @@
 =end
 
 s = "This is a testing"
-puts s.split.reverse.join(" ") #Same as puts s.split.reverse * " "
+puts s.split.reverse.join(" ") #Same as s.split.reverse * " "
 
