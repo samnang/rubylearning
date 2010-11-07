@@ -4,5 +4,5 @@
 =end
 
 collection = [1, 2, 3, 4, 5]
-collection.inject(&:+)
+collection.inject(:+)
 

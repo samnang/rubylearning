@@ -15,9 +15,17 @@ loop do
   print "You enter: "
   input = gets.chomp
 
-  break if input == "BYE"
-  respond = (input == input.upcase) ? "NO, NOT SINCE #{Random.new.rand(1930..1950)}!" :
+  respond = "Grandma responds: "
+  if input == "BYE"
+    puts respond + "Good luck! BYE..."
+    break
+  end
+
+  respond += input == input.upcase ? "NO, NOT SINCE #{Random.new.rand(1930..1950)}!" :
                                       "HUH?! SPEAK UP, SONNY!"
-  puts "Grandma responds: #{respond}"
+  puts respond
 end
+
+#another trick to have range value in random
+# min + rand(max - min)
 
