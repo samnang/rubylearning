@@ -11,5 +11,5 @@
   6. h.exists?("Perl")
 =end
 
-2, 4, 5 return true. These member?, include?, :has_key? are the same, and it just one method alias another one, we use it to check is the hash has the key that passed in. has_value? tells us what it does from its method name. But exists? doesn't exist in instance methods of Hash.
+2, 4, 5 return true. These member?, include?, has_key? are the same, and it just one method alias another one, we use it to check is the hash has the key that passed in. has_value? tells us what it does from its method name. But exists? doesn't exist in instance methods of Hash.
 
