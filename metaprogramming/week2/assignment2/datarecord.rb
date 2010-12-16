@@ -10,7 +10,7 @@ class Datarecord
 
     private
     def define_class_with_attributes(file)
-      klass_name = file.split(".").first
+      klass_name = file.split(".").first.titlecase
       attributes = open(file).gets.chomp.split(", ").map(&:to_sym)
 
       klass = Struct.new(*attributes) do
@@ -26,7 +26,7 @@ class Datarecord
         end
       end
 
-      Object.const_set(klass_name.titlecase, klass)
+      Object.const_set(klass_name, klass)
     end
   end
 end
