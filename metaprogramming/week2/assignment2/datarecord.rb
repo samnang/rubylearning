@@ -1,5 +1,3 @@
-require_relative 'string_ext'
-
 class Datarecord
   class << self
     def make(file)
@@ -10,7 +8,7 @@ class Datarecord
 
     private
     def define_class_with_attributes(file)
-      klass_name = file.split(".").first.titlecase
+      klass_name = file.split(".").first.capitalize
       attributes = open(file).gets.chomp.split(", ").map(&:to_sym)
 
       klass = Struct.new(*attributes) do
